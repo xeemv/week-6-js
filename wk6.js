@@ -117,8 +117,17 @@ function doSomething(x, y){
     return x + y;
 }
 
-/* function doSomething
+/* function doSomething:
  - checking to see if 'x' is not a string
  - the function will concatenate a string into another data type
  - but will throw an error if the first parameter is not a string
  */
+
+ /**
+  * to test as many scenarios as we can for this example we will test the happy path or the path that we simply expect to work 
+	- as well as what happens when we pass in an argument into the first position that is not a string 
+  * to write this: create a new js file
+    - see file "index_test.js"
+  * 
+  * 
+  */
