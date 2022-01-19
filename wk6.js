@@ -1,29 +1,29 @@
-/* 
+/*  - Debugging Section -
 - the console.log = testing the function below
 */
 
-console.log(hasStringAtEnd('hello', 'llo')); // true
-// looking at both strings: "hello" and 'llo'
-console.log(hasStringAtEnd('llo', 'hello')); // true
-console.log(hasStringAtEnd('llod', 'hello')); // false
-console.log(hasStringAtEnd('ll', 'hello')); // false
-console.log(hasStringAtEnd('llo', 'hellod')); // false
+// console.log(hasStringAtEnd('hello', 'llo')); // true
+// // looking at both strings: "hello" and 'llo'
+// console.log(hasStringAtEnd('llo', 'hello')); // true
+// console.log(hasStringAtEnd('llod', 'hello')); // false
+// console.log(hasStringAtEnd('ll', 'hello')); // false
+// console.log(hasStringAtEnd('llo', 'hellod')); // false
 
-function hasStringAtEnd(a, b){
-    let shortest = '';
-    let longest = '';
-    if (a.length < b.length) {
-        shortest = a;
-        longest = b;
-    } else {
-        shortest = b;
-        longest = a;
-    }
+// function hasStringAtEnd(a, b){
+//     let shortest = '';
+//     let longest = '';
+//     if (a.length < b.length) {
+//         shortest = a;
+//         longest = b;
+//     } else {
+//         shortest = b;
+//         longest = a;
+//     }
 
-    const indexStart = longest.length - shortest.length;
-    const endOfLongest = longest.substring(indexStart);
-    return shortest === endOfLongest;
-}
+//     const indexStart = longest.length - shortest.length;
+//     const endOfLongest = longest.substring(indexStart);
+//     return shortest === endOfLongest;
+// }
 
 /* 
 - during initial run of this code using live server:
@@ -103,6 +103,22 @@ function hasStringAtEnd(a, b){
     false wk6.js:10:9
 
 
+ */
 
+/*** installed node npm - unit testing section
+ * 
+ * 
+ * 
+ */
+function doSomething(x, y){
+    if (typeof x != 'string'){
+        throw new error('x must be a string');
+    }
+    return x + y;
+}
 
+/* function doSomething
+ - checking to see if 'x' is not a string
+ - the function will concatenate a string into another data type
+ - but will throw an error if the first parameter is not a string
  */

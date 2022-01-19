@@ -1,0 +1,26 @@
+{
+  "name": "week-6",
+  "version": "1.0.0",
+  "description": "week 6 js course",
+  "main": "wk6.js",
+  "scripts": {
+    "test": "wk6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeemv/week-6-js.git"
+  },
+  "keywords": [
+    "wk6"
+  ],
+  "author": "xee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xeemv/week-6-js/issues"
+  },
+  "homepage": "https://github.com/xeemv/week-6-js#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.4"
+  }
+}
