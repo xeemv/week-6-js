@@ -9,7 +9,7 @@ console.log(hasStringAtEnd('llod', 'hello')); // false
 console.log(hasStringAtEnd('ll', 'hello')); // false
 console.log(hasStringAtEnd('llo', 'hellod')); // false
 
-function hasStringAtEnd(a,b){
+function hasStringAtEnd(a, b){
     let shortest = '';
     let longest = '';
     if (a.length < b.length) {
@@ -21,7 +21,7 @@ function hasStringAtEnd(a,b){
     }
 
     const indexStart = longest.length - shortest.length;
-    const endOfLongest = longest.substring(indexStart + 1);
+    const endOfLongest = longest.substring(indexStart);
     return shortest === endOfLongest;
 }
 
@@ -49,4 +49,60 @@ function hasStringAtEnd(a,b){
         - refresh the browser page
     - instead of printing false 5x in the console
         - it will not print anything
+    - we will use the "step over(f10)" tool to go through each line at a time in the browser
+
+
+
+- after debugging on console:
+    - we will change the code from line 58 - 60 (original code):
+
+    const indexStart = longest.length - shortest.length;
+    const endOfLongest = longest.substring(indexStart + 1);
+    return shortest === endOfLongest;
+
+    - new code below:
+    const indexStart = longest.length - shortest.length;
+    const endOfLongest = longest.substring(indexStart);
+    return shortest === endOfLongest;
+}
 */
+
+
+/*
+- brand new code:
+
+    console.log(hasStringAtEnd('hello', 'llo')); // true
+    console.log(hasStringAtEnd('llo', 'hello')); // true
+    console.log(hasStringAtEnd('llod', 'hello')); // false
+    console.log(hasStringAtEnd('ll', 'hello')); // false
+    console.log(hasStringAtEnd('llo', 'hellod')); // false
+
+    function hasStringAtEnd(a, b){
+        let shortest = '';
+        let longest = '';
+        if (a.length < b.length) {
+            shortest = a;
+            longest = b;
+        } else {
+            shortest = b;
+            longest = a;
+        }
+
+        const indexStart = longest.length - shortest.length;
+        const endOfLongest = longest.substring(indexStart);
+        return shortest === endOfLongest;
+
+    }
+
+
+- how it will print in the console:
+    true wk6.js:5:9
+    true wk6.js:7:9
+    false wk6.js:8:9
+    false wk6.js:9:9
+    false wk6.js:10:9
+
+
+
+
+ */
