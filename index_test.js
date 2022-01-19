@@ -52,5 +52,9 @@ describe("Myfunctions", function() {
 			◊ this one had to be wrapped inside of expect because   it's going to throw an error
 			◊ we have to catch that error
             ◊ expect to say it should throw an error all right  
-        -
+            -
+
+ ** stopped at the 10:17 minute mark **
+
+
 */
